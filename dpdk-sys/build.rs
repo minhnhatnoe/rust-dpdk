@@ -186,7 +186,7 @@ impl State {
 
         if config_header.exists() && build_config_header.exists() {
             self.include_path = Some(PathBuf::from("/usr/local/include"));
-            self.library_path = Some(PathBuf::from(format!("/usr/local/lib/{}", machine_string)));
+            self.library_path = Some(PathBuf::from("/usr/local/lib64"));
         } else {
             panic!(
                 "DPDK is not installed on your system! (Cannot find {} nor {})",
